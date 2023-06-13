@@ -4,6 +4,6 @@
       href="{{ route('pages', [$data->slug]) }}">{{ __($data->name) }}</a></li>
 @endforeach
 <li><a class="{{ menuActive('campaign.index') }}" href="{{ route('campaign.index') }}">@lang('CAMPAIGNS')</a></li>
-<li><a class="{{ menuActive('volunteer.index') }}" href="{{ route('volunteer.index') }}">@lang('VOLUNTEERS')</a></li>
+<li><a class="{{ menuActive('volunteer.index') }}" href="{{ route('volunteer.index') }}">@lang('WORK WITH US')</a></li>
 <li><a class="{{ menuActive('success.story.archive') }}"
-    href="{{ route('success.story.archive') }}">@lang('SUCCESS STORY')</a></li>
+    href="{{ route('success.story.archive') }}">@lang('EXPERTISE')</a></li>
