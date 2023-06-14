@@ -10,7 +10,8 @@ class VolunteerController extends Controller
 {
     public function index()
     {
-        $pageTitle  = "List of Volunteers";
+        // $pageTitle  = "List of Volunteers";
+        $pageTitle  = "Work With Us";
         $volunteers = Volunteer::active()->orderBy('id', 'DESC')->paginate(getPaginate());
         $countries  = json_decode(file_get_contents(resource_path('views/partials/country.json')));
         return view($this->activeTemplate.'volunteer.index',compact('pageTitle', 'volunteers', 'countries'));
