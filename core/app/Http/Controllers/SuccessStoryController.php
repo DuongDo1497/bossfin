@@ -14,7 +14,7 @@ class SuccessStoryController extends Controller
     public function index()
     {
      
-         $pageTitle     = 'Success Stories';
+         $pageTitle     = 'Expertise';
          $sections      = Page::where('tempname', $this->activeTemplate)->where('slug', 'campaign')->first();
          $categories    = Category::active()->whereHas('story')->get();
          $stories       = SuccessStory::searchable(['title'])->orderBy('id', 'DESC')->with('category')->filter(request(['month', 'year', 'category_id']))->paginate(getPaginate());
@@ -24,7 +24,7 @@ class SuccessStoryController extends Controller
 
     public function details($slug, $id)
     {
-        $pageTitle = 'Success Story Details';
+        $pageTitle = 'Expertise Details';
 
         $story        = SuccessStory::where('slug', $slug)->findOrFail($id);
         $story->view += 1;
