@@ -19,7 +19,8 @@ class VolunteerController extends Controller
 
     public function form()
     {
-        $pageTitle  = "Join as Volunteer";
+        // $pageTitle  = "Join as Volunteer";
+        $pageTitle  = "Join Us";
         $info       = json_decode(json_encode(getIpInfo()), true);
         $mobileCode = @implode(',', $info['code']);
         $countries  = json_decode(file_get_contents(resource_path('views/partials/country.json')));
